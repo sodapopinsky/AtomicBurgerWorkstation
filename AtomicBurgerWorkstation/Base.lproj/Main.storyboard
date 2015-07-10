@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Meat Calculator-->
+        <scene sceneID="wuO-Ho-J6n">
+            <objects>
+                <viewController id="c1a-gk-sS9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d9S-Pm-L0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="jao-Jm-TCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iDG-Sc-fZA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meat Calculator" id="tdB-ZH-yCW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wp-bC-SCV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="-400"/>
+        </scene>
+        <!--Meat Calculator-->
+        <scene sceneID="fgZ-y6-GCT">
+            <objects>
+                <navigationController id="Cef-7I-lSf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meat Calculator" image="CalculatorIcon" id="BOM-8y-z3V"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mJu-2f-4Aa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90588235289999997" green="0.26274509800000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c1a-gk-sS9" kind="relationship" relationship="rootViewController" id="4ci-bK-Cp2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iri-my-jdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="-410"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="r3y-n3-vFl">
+            <objects>
+                <tableViewController id="89C-XR-ECF" customClass="InventoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mW7-Dv-Boj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCellIdentifier" id="Ya5-zU-arl">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ya5-zU-arl" id="XyM-IY-3oj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="89C-XR-ECF" id="pCY-ke-1Ix"/>
+                            <outlet property="delegate" destination="89C-XR-ECF" id="KnS-tX-0gT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Inventory" id="ea5-Ug-m7U"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvN-Ex-1Lt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="291"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="W9o-B4-QZo">
+            <objects>
+                <navigationController id="rLe-hL-WCr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inventory" image="InventoryIcon" id="mJl-lu-1i1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xMY-r8-bcW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90588235289999997" green="0.26274509800000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="89C-XR-ECF" kind="relationship" relationship="rootViewController" id="akU-RB-CDM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X01-up-ZGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="283"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rLe-hL-WCr" kind="relationship" relationship="viewControllers" id="wKe-mt-L3N"/>
+                        <segue destination="Cef-7I-lSf" kind="relationship" relationship="viewControllers" id="e3f-h5-4Hz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CalculatorIcon" width="30" height="30"/>
+        <image name="InventoryIcon" width="30" height="30"/>
+    </resources>
+</document>
